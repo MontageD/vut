@@ -1,36 +1,32 @@
 import './styles/index.scss'
 
+import xaButton  from './components/button/xaButton'
+import xabuttonGroup  from './components/button/xabuttonGroup'
+import xaContainer  from './components/Layout/xaContainer'
+import xaRow  from './components/Layout/xaRow'
 
 
-import {Button, ButtonGroup}  from './components/button/index'
 
-
-const components = [
-    Button,
-    ButtonGroup
+const Components = [
+    xaButton,
+    xabuttonGroup,
+    xaContainer,
+    xaRow
 ]
-
-console.log(components)
 const install = function (Vue){
     if(install.installed) return
-   
 
-
-    console.log(components)
-    components.map((component)=>Vue.component(component.name,component))
-    // for (let i in Components) {
-    //     Vue.component(i, Components[i])
-    //  }
+    console.log(Components)
+    Components.map((components)=>Vue.component(components.name, components))
+ 
 }
-
-
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue)
 }
 
 const API = {
     install,
-    components
+    Components
 }
 
 export default API

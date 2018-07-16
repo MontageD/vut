@@ -1,0 +1,41 @@
+
+
+
+/*extend color*/
+$prefix : 'xa';
+
+@mixin btn-size($p,$f,$l,$b) {
+    padding: $p; 
+    font-size: $f;
+    line-height: $l;
+    border-radius: $b;
+}
+
+
+@mixin defaultBtnSize {
+    // 默认按钮样式
+    @include btn-size (6px 12px,14px,1.42857143,4px)
+}
+
+
+
+@mixin lgBtnSize {
+    @include btn-size (10px 16px,18px,1.3333,6px)
+}
+
+
+@mixin smBtnSize {
+    @include btn-size (5px 10px,12px,1.5,3px)
+}
+
+@mixin xsBtnSize {
+    @include btn-size (1px 5px,12px,1.5,3px)
+}
+
+
+
+
+
+
+
+

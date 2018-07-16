@@ -4,7 +4,7 @@
 
 <script>
     export default {
-      name: 'xa-button-group'
+      name: 'xaButtonGroup'
     }
 </script>
 

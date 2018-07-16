@@ -1,10 +1,51 @@
 <template>
-    <div>
-   <xm-button-group class="btn__group">
-  <xm-button type="warning">警告</xm-button>
-  <xm-button type="primary" @click="btnClick" icon="xm__icon--checked" >主要</xm-button>
-  <xm-button type="success" icon="xm__icon--loading">成功</xm-button>
-</xm-button-group>
+    <div class="container">
+
+
+         <xaButton >default</xaButton>
+         <xaButton disabled>default</xaButton>
+<xaButton type="primary" loading>primary</xaButton>
+<xaButton type="success">success</xaButton>
+<xaButton type="info">info</xaButton>
+<xaButton type="warning">warning</xaButton>
+<xaButton type="danger">danger</xaButton>
+         <br/>
+             <hr/>
+
+
+
+             <xaButton type="primary" size="lg">lg</xaButton>
+<xaButton type="primary">default</xaButton>
+<xaButton type="primary" size="sm">sm</xaButton>
+<xaButton type="primary" size="xs">xs</xaButton>
+
+
+
+<xaButtonGroup class="btn-group">
+ <xaButton >default</xaButton>
+  <xaButton >default</xaButton>
+  <xaButton type="primary">primary</xaButton>
+  <xaButton >default</xaButton>
+
+</xaButtonGroup>
+  <br/>
+
+  <xaButton icon="icon-film" noRadius=false></xaButton>
+
+
+
+<xaContainer>
+
+
+
+</xaContainer>
+
+
+<xaRow>
+    
+</xaRow>
+
+
 
     </div>
 </template>
@@ -12,10 +53,20 @@
     export default {
         data: () => ({
             show: true
-        })
+        }),
+        methods: {
+            btnClick(){
+                console.log('子组件触发')
+            }
+        }
     }
 </script>
 <style>
+    .container{
+        margin: 3rem;
+    }
+
+
     .transition-box {
         margin-bottom: 10px;
         width: 200px;

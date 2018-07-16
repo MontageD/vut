@@ -1,0 +1,56 @@
+/* loading */
+.#{$prefix}-page-loading-con{
+    display: inline-block;
+    z-index: 1000;
+  }
+  .#{$prefix}-page-loading {
+    animation: loading-spin 2s linear 0s infinite;
+    font-size: 28px;
+    float: left;
+    &:before{
+      font-family: "FontAwesome";
+      content: "\f110";
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+    }
+  
+    &.#{$prefix}-loading-lg {
+      font-size: 40px;
+    }
+    &.#{$prefix}-loading-lg.#{$prefix}-loading-center {
+      margin: -20px 0 0 -20px;
+    }
+    &.#{$prefix}-loading-sm {
+      font-size: 18px;
+    }
+    &.#{$prefix}-loading-sm.#{$prefix}-loading-center {
+      margin: -9px 0 0 -9px;
+    }
+    &.#{$prefix}-loading-xs {
+      font-size: 12px;
+    }
+    &.#{$prefix}-loading-xs.#{$prefix}-loading-center {
+      margin: -6px 0 0 -6px;
+    }
+    &.#{$prefix}-loading-refresh:before {
+      content: "\f021";
+    }
+  }
+  
+  .#{$prefix}-loading-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -14px 0 0 -14px;
+  }
+  
+  @keyframes loading-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }	
