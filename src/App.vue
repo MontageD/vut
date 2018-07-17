@@ -30,7 +30,7 @@
 </xaButtonGroup>
   <br/>
 
-  <xaButton icon="icon-film" noRadius=false></xaButton>
+  <xaButton icon="icon-film" noRadius=true></xaButton>
 
 
 
@@ -42,7 +42,7 @@
 
 
 <xaRow>
-    
+
 </xaRow>
 
 
