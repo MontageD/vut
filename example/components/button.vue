@@ -1,15 +1,9 @@
 <template>
     <div>
-        button
+       <xaButton :bgColor="`#000`" :color="`#fff`">我是按钮</xaButton>
     </div>
 </template>
 
-<script>
-export default {
 
-}
-</script>
 
-<style>
 
-</style>

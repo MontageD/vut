@@ -32,7 +32,7 @@ module.exports = merge(baseConfig, {
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': path.resolve(root, 'example'),
-            'src': path.resolve(root, 'src')
+            'temp': path.resolve(root, 'src')
         }
     },
     plugins: [

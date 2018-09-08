@@ -7,7 +7,7 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-import XAM from 'src/xam.js';
+import XAM from 'temp/xam.js';
 
 
 

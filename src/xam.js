@@ -1,20 +1,17 @@
 import Vue from 'vue'
 import App from './App';
-
 import {
-  Button,
-} from 'src/components/button'
+  Button
+} from './components/button'
 
 const install = function (Vue) {
-  // Vue.component(Button.name, Button);
+  Vue.component(Button.name, Button);
   // Vue.component(ButtonGroup.name, ButtonGroup)
 
   Vue.prototype.$dialog = {
-    // confirm: Confirm
+    Button: Button
   };
 };
-
-
 
 
 if (typeof window !== 'undefined' && window.Vue) {

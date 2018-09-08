@@ -13,12 +13,12 @@
     >
         <i :class="icon" v-if="icon"></i>
         <!-- <i class="xa-page-loading" v-if="loading && !icon"> -->
-       <loading v-if="loading" size="xs" style="position:relative;top:2px;left:2px;float:right;"></loading>
+       <!-- <loading v-if="loading" size="xs" style="position:relative;top:2px;left:2px;float:right;"></loading> -->
         <slot></slot>
 </a>
 </template>
 <script>
-import loading from '../Loading/Loading'
+// import loading from '../Loading/Loading'
 export default {
     name: 'xaButton',
     props: { //父组件传入的值
@@ -78,7 +78,6 @@ export default {
     }
   },
   components:{
-    loading
   }
 }
 </script>
