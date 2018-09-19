@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import App from './App';
 import {
   Button
 } from './components/button'

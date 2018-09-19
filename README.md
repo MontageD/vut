@@ -1,18 +1,32 @@
-# small
+# Vut 
 
-> A Vue.js project
+> Vue.js 的移动开发组件
 
-## Build Setup
+> 组件的核心思想：
+- 样式
+- 功能(改变自身状态)
+- 动作/交互(与其他外部交流))
 
-``` bash
-# install dependencies
-npm install
+> 样式组件
+- 按钮
+- 表单
+- 列表
+- 网络
+- 布局
+- 开关
+- 单选
+- 多选
+- 时间轴
 
-# serve with hot reload at localhost:8080
-npm run dev
 
-# build for production with minification
-npm run build
-```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+> JS组件
+- 提示框
+- 进度条
+- 安全键盘
+- 发送验证码
+- 下拉刷新
+- 省市县级联动
+- 事件倒计时
+- 弹出窗口
+- 图片预览
