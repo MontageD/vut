@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import './common/base.scss'
 import {
   Button
 } from './components/button'

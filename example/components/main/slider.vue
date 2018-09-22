@@ -139,52 +139,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-nav {
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
-  padding-top: 20px;
-  display: block;
-  min-width: 218px;
-  width: 218px;
-  color: #555;
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding-left: 25px;
-  ul {
-    position: relative;
-    padding-bottom: 20px;
-    li {
-      list-style: none;
-      .nav-tag {
-        font-size: 18px;
-        span {
-          display: inline-block;
-          height: 10px;
-          width: 10px;
-          border-radius: 50%;
-          background-color: #ff5252;
-          margin-right: 10px;
-        }
-      }
-      .nav-text {
-        font-size: 14px;
-        padding-left: 15px;
-        display: block;
-        text-indent: 35px;
-        small {
-          margin-left: 6px;
-          color: #999;
-          font-size: 12px;
-        }
-      }
-      a {
-        cursor: pointer;
-        display: block;
-        padding-left: 16px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        position: relative;
-      }
-    }
-  }
-}
+
 </style>
