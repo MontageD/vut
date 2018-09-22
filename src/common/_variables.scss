@@ -14,11 +14,15 @@ $lightColor: #f9f9f9;
 /*-------font color ------*/
 $fontColor: #555;
 
+/*-------font shape ------*/
+$shape: 3px;
+$circle: 20px;
+
 
 
 /*theme color*/
-$primaryColor: #60d4a0;
-$primaryColorhover: #39b2a9;
+$primaryColor: #1E88E5;
+$primaryColorhover: #1565C0;
 $hoverColor:rgba(65, 202, 192, 0.05);
 
 /*extend color*/
@@ -28,11 +32,15 @@ $successColorhover: #30d073;
 $infoColor: #2db7f5;
 $infoColorhover: #43bcf3;
 
-$dangerColor: #f50;
-$dangerColorhover: #f9702b;
+$dangerColor: #EF5350;
+$dangerColorhover: #FF1744;
 
-$warningColor: #fa0;
-$warningColorhover: #f5b73b;
+$warningColor: #FBC02D;
+$warningColorhover: #F57F17;
+
+
+$errorColor: #455A64;
+$errorColorhover: #263238;
 
 
 
