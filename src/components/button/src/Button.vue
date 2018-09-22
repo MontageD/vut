@@ -3,7 +3,7 @@
     <slot></slot>
   </button>
 </template>
-<script>
+<script> 
 // import loading from '../Loading/Loading'
 const COMPONENT_NAME = "vut-button";
 export default {
