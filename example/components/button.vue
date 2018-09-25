@@ -53,30 +53,22 @@
                 <pre><code class="language-html hljs xml" >{{buttonIcon}}</code></pre>
             </div>
             <div class="t-content-right">
-                <vutButton icon="loading" size="large">loading</vutButton>
+                <vutButton icon="loading" iconText="信息正在加载.." size="large">loading</vutButton>
             </div>
         </div>
         <div class="t-intent">
-            <li>按键反馈</li>
+            <li>按钮功能</li>
         </div>
         <div class="t-content">
             <div class="t-content-left">
-                <pre><code class="language-html hljs xml" >{{buttonBack}}</code></pre>
+                <pre><code class="language-html hljs xml" >{{buttonFunction}}</code></pre>
             </div>
             <div class="t-content-right">
-                <vutButton size="large">primary</vutButton>
-            </div>
-        </div>
-
-        <div class="t-intent">
-            <li>混合使用的安全例子</li>
-        </div>
-        <div class="t-content">
-            <div class="t-content-left">
-                <pre><code class="language-html hljs xml" >{{buttonResult}}</code></pre>
-            </div>
-            <div class="t-content-right">
-                <vutButton size="large">primary</vutButton>
+                <vutButton htmlType="button">htmlType-button</vutButton>
+                <vutButton htmlType="submit">htmlType-submit</vutButton>
+                <vutButton htmlType="submit">htmlType-submit</vutButton>
+                <vutButton htmlType="button">htmlType-button</vutButton>
+                <vutButton disabled>disabled</vutButton>
             </div>
         </div>
 
@@ -101,7 +93,6 @@
                         <td>按钮类型</td>
                         <td>String</td>
                         <td>
-
                             <span class="smork">primary</span>,
                             <span class="smork">success</span>,
                             <span class="smork">info</span>,
@@ -113,23 +104,50 @@
                     <tr>
                         <td>size</td>
                         <td>按钮的大小</td>
-                        <td>String</td>
-                        <td>type</td>
-                        <td>type</td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            <span class="smork">normarl</span>,
+                            <span class="smork">small</span>,
+                            <span class="smork">large</span>
+                        </td>
+                        <td>normarl</td>
                     </tr>
                     <tr>
                         <td>shape</td>
                         <td>形状类型</td>
                         <td>String</td>
-                        <td>type</td>
-                        <td>type</td>
+                        <td>
+                            <span class="smork">loading</span>
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>group</td>
+                        <td>外层嵌套</td>
+                        <td>Boolean</td>
+                        <td>
+                            -
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>icon</td>
+                        <td>形状类型</td>
+                        <td>String</td>
+                        <td>
+                            <span class="smork">square</span>,
+                            <span class="smork">circle</span>
+                        </td>
+                        <td>-</td>
                     </tr>
 
                     <tr>
                         <td>disabled</td>
                         <td>是否禁用</td>
                         <td>Boolean</td>
-                        <td>type</td>
+                        <td>-</td>
                         <td>type</td>
                     </tr>
                     <tr>
@@ -141,11 +159,23 @@
                         <td>
                             <span class="smork">button</span>
                             <span class="smork">submit</span>
-                            <span class="reset">reset</span>
+                            <span class="smork">reset</span>
                         </td>
                         <td>button</td>
                     </tr>
-
+                    <tr>
+                        <td>htmlType</td>
+                        <td>按键类型</td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            <span class="smork">button</span>
+                            <span class="smork">submit</span>
+                            <span class="smork">reset</span>
+                        </td>
+                        <td>button</td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -173,9 +203,12 @@ export default {
 <vutButton size="large">small</vutButton>`,
       buttonShape: `<vutButton shape="square">square</vutButton>
 <vutButton shape="circle">circle</vutButton>`,
-      buttonIcon: `<vutButton icon="loading">loading</vutButton>`,
-      buttonBack: ``,
-      buttonResult: ``
+      buttonIcon: `<vutButton icon="loading">loading</vutButton>  `,
+      buttonFunction: `<vutButton htmlType="button">htmlType-button</vutButton>
+<vutButton htmlType="submit">htmlType-submit</vutButton>
+<vutButton htmlType="submit">htmlType-submit</vutButton>
+<vutButton htmlType="button">htmlType-button</vutButton>
+<vutButton disabled="true">disabled</vutButton>`
     };
   },
   components: {},

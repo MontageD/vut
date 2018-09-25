@@ -2,14 +2,18 @@
   <nav>
     <ul class="nav" ref="nav">
       <li v-for="(v,index) in list" :key="index">
-        <a v-if="v.tag" class="nav-tag" @click="changeRouter(`${v.eng}`)">
-          <span></span>
-          {{v.name}}
-        </a>
-        <a v-if="!v.tag" class="nav-text" @click="changeRouter(`${v.eng}`)">
-          {{v.name}}
-          <small>{{v.eng}}</small>
-        </a>
+        <span>
+          <a v-if="v.tag" class="nav-tag" @click="changeRouter(`${v.eng}`)">
+            <span></span>
+            {{v.name}}
+          </a>
+          <a v-if="!v.tag" class="nav-text" @click="changeRouter(`${v.eng}`)">
+
+            {{v.name}}
+            <small>{{v.eng}}</small>
+          </a>
+        </span>
+
       </li>
     </ul>
   </nav>
@@ -21,18 +25,18 @@ export default {
       list: [
         {
           name: "开始准备",
-          tag: 1
+          tag: 2
         },
         {
           name: "快速上手",
-          eng: 'QuickGo'
+          eng: "QuickGo"
         },
         {
           name: "更新日志",
-            eng: 'updateDate'
+          eng: "updateDate"
         },
         {
-          name: "样式组件",
+          name: "基础组件",
           tag: 2
         },
         {
@@ -40,11 +44,19 @@ export default {
           eng: "Button"
         },
         {
-          name: "表单",
+          name: "图标",
+          eng: "icon"
+        },
+        {
+          name: "表单组件",
+          tag: 2
+        },
+        {
+          name: "表单基础样式",
           eng: "Cell"
         },
         {
-          name: "列表",
+          name: "文字/图文列表",
           eng: "List"
         },
         {
@@ -68,11 +80,16 @@ export default {
           eng: "Select"
         },
         {
+          name: "可视工具组件",
+          tag: 2
+        },
+        {
           name: "时间轴",
           eng: "TimeLine"
         },
+
         {
-          name: "JavaScript组件",
+          name: "常规交互组件",
           tag: 2
         },
         {
@@ -139,5 +156,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>

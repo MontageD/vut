@@ -1,20 +1,29 @@
 <template>
-  <button :class="styleClass">
-    <span :class="iconClass" v-if="iconClass">
-    </span>
-    <span v-if="!iconClass"> </span>
-    <span>
-      <slot></slot>
-    </span>
-
-  </button>
+  <span  :class="{ 'vut-btn-group':group}">
+    <button :class="styleClass" :disabled="disabled">
+      <span v-if="iconClass" :class="iconClass">
+        <i></i>
+        <template v-if="iconText">
+          <span>{{iconText}}</span>
+        </template>
+        <template v-else>{{iconText}}</template>
+      </span>
+      <span v-if="!iconClass" style="visibility:hidden;">
+      </span>
+      <span :style="{visibility: (iconClass?true:false) ? 'hidden' : ''}">
+        <slot></slot>
+      </span>
+    </button>
+  </span>
 </template>
 <script>
 // import loading from '../Loading/Loading'
 const COMPONENT_NAME = "vutButton";
 import { isInArray } from "../../../utils/assist";
+import mixins from "../../../mixins/Robot.js";
 export default {
   name: COMPONENT_NAME,
+  mixins: [mixins],
   props: {
     // 跟样式相关
     type: {
@@ -30,9 +39,12 @@ export default {
       },
       default: "primary"
     },
+    group: {
+      default: false
+    },
     size: {
       validator(value) {
-        return isInArray(value, ["small", "normarl", "large"]);
+        return isInArray(value, ["normarl", "small", "large"]);
       }
     },
     // 形状
@@ -41,7 +53,6 @@ export default {
         return isInArray(value, ["square", "circle"]);
       }
     },
-
     // 是否不能点
     disabled: {
       type: Boolean,
@@ -59,6 +70,10 @@ export default {
       validator(value) {
         return isInArray(value, ["loading"]);
       }
+    },
+    iconText: {
+      type: String,
+      default: "请填写图标的文字"
     }
     //  动作交互
   },
@@ -67,12 +82,13 @@ export default {
   },
   computed: {
     iconClass: function() {
-      var classes = this.icon ? "vut-btn-" + this.icon + " " : " ";
+      var classes = this.icon ? "vut-btn-" + this.icon + " " : "";
       return classes;
     },
     styleClass: function() {
       var classes =
         "vut-btn " +
+        (this.disabled ? "vut-btn-disabled" + " " : "") +
         (this.type ? "vut-btn-" + this.type + " " : "") +
         (this.shape ? "vut-btn-" + this.shape + " " : "") +
         (this.size ? "vut-btn-" + this.size + " " : "");
