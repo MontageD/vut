@@ -3,28 +3,36 @@
         <h1 class="h1-blue">按钮</h1>
         <div class="t-intent">
             <p>代码实例</p>
-            <li>普通类型按钮</li>
         </div>
+      
         <div class="t-content">
             <div class="t-content-left">
-                <pre><code class="language-html hljs xml" >{{buttonHtml}}</code></pre>
+                <!-- <pre><code class="language-html hljs xml" >{{buttonHtml}}</code></pre> -->
             </div>
             <div class="t-content-right">
-                <vutButton type="primary">primary</vutButton>
+                <vutCell>
+
+
+
+
+                    
+                </vutCell>
             </div>
         </div>
 
-        <div class="t-intent">
-            <li>特殊大小按钮</li>
-        </div>
-        <div class="t-content">
+
+
+            <div class="t-content">
             <div class="t-content-left">
                 <pre><code class="language-html hljs xml" >{{buttonSize}}</code></pre>
             </div>
             <div class="t-content-right">
+                <vutButton size="normarl">normarl</vutButton>
+                <vutButton size="large">large</vutButton>
                 <vutButton size="small">small</vutButton>
             </div>
         </div>
+
 
         <h2> API</h2>
         <p class="t-intent">

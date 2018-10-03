@@ -26,12 +26,14 @@ body {
     height: -moz-calc(100% - 40px);
     height: -webkit-calc(100% - 40px);
     height: calc(100% -40px);
+
     .slider {
         height: auto;
         background: #e3e3e3;
         /*空白区域分配比例为0（作用于项目）*/
         flex-grow: 0;
     }
+
     .router {
         margin-left: 10px;
         width: auto;
@@ -51,13 +53,17 @@ nav {
     overflow-x: hidden;
     overflow-y: auto;
     padding-left: 25px;
+
     ul {
         position: relative;
         padding-bottom: 20px;
+
         li {
             list-style: none;
+
             .nav-tag {
                 font-size: 16px;
+
                 span {
                     display: inline-block;
                     height: 10px;
@@ -67,17 +73,20 @@ nav {
                     margin-right: 10px;
                 }
             }
+
             .nav-text {
                 font-size: 14px;
                 padding-left: 15px;
                 display: block;
                 text-indent: 35px;
+
                 small {
                     margin-left: 6px;
                     color: #999;
                     font-size: 12px;
                 }
             }
+
             a {
                 cursor: pointer;
                 display: block;
@@ -98,10 +107,12 @@ nav {
     height: 40px;
     background-color: #3F51B5;
     display: flex;
+
     & .header-logo {
         height: 100%;
         flex: 1;
         position: relative;
+
         & .logo-text {
             position: absolute;
             top: 50%;
@@ -113,6 +124,7 @@ nav {
         }
     }
 }
+
 
 .content-box {
     margin-right: 20px;
@@ -156,25 +168,37 @@ pre {
     padding: 0 9.5px !important;
     background: transparent !important;
 }
-pre code{
+
+pre code {
     font-size: 15px !important;
     background: transparent !important;
 }
+
+.t-box {
+    padding: 10px;
+    box-shadow: 0 5px 10px -7px rgba(87, 53, 117, 0.13), 0 10px 30px -6px rgba(0, 60, 170, 0.1);
+
+}
+
 .t-content {
     display: flex;
-    border: 1px solid #e2e2e2;
     position: relative;
+    border: 1px solid #eee;
+
     & .t-content-left {
         flex: 1;
         height: 100%;
     }
+
     & .t-content-right {
+        min-height: 1rem;
         padding: 0 10px;
         padding-bottom: 10px;
         flex: 1;
         border-left: 1px dashed #dedede;
     }
-    &:after{
+
+    &:after {
         content: " ";
         display: table;
         clear: both;
@@ -182,25 +206,30 @@ pre code{
 }
 
 .table {
+
     // margin-left: 1.3em;
     table {
         height: 40px;
         width: 100%;
         margin-bottom: 20px;
         margin-top: 5px;
+
         tr {
             height: 40px;
         }
+
         td {
             height: 40px;
             border: 1px solid #ececec;
             padding: 0 8px;
+
             .smork {
                 border-radius: 3px;
                 margin-right: 5px;
                 margin-bottom: 5px;
                 padding: 5px;
                 background-color: #e7eaed;
+
                 &:hover {
                     background-color: #303F9F;
                     color: #fff;
@@ -212,3 +241,39 @@ pre code{
 }
 
 
+
+// vut
+.vut_lists {
+    width: 100% !important;
+
+}
+
+.vut_lists li {
+    float: left;
+    width: 100px;
+    height: 180px;
+    text-align: center;
+    list-style: none !important;
+}
+
+.vut_lists .vut-icon {
+    font-size: 42px;
+    line-height: 100px;
+    margin: 10px 0;
+    color: #333;
+    -webkit-transition: font-size 0.25s ease-out 0s;
+    -moz-transition: font-size 0.25s ease-out 0s;
+    transition: font-size 0.25s ease-out 0s;
+
+}
+
+.vut_lists .vut:hover {
+    font-size: 100px;
+}
+.fontclass{
+    display: none;
+}
+
+.icon{
+   cursor: pointer; 
+}

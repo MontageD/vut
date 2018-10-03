@@ -1,5 +1,5 @@
 <template>
-  <span  :class="{ 'vut-btn-group':group}">
+  <span :class="{ 'vut-btn-group':group}">
     <button :class="styleClass" :disabled="disabled">
       <span v-if="iconClass" :class="iconClass">
         <i></i>
@@ -19,8 +19,8 @@
 <script>
 // import loading from '../Loading/Loading'
 const COMPONENT_NAME = "vutButton";
-import { isInArray } from "../../../utils/assist";
-import mixins from "../../../mixins/Robot.js";
+import { isInArray } from "../../utils/assist";
+import mixins from "../../mixins/Robot.js";
 export default {
   name: COMPONENT_NAME,
   mixins: [mixins],
@@ -101,7 +101,7 @@ export default {
 
 
 <style lang="scss" rel="stylesheet/scss">
-@import "../../../common/base.scss";
-@import "../../../common/button.scss";
+@import "../../common/base.scss";
+@import "../../common/button.scss";
 </style>
 

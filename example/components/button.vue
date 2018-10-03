@@ -2,9 +2,10 @@
     <div class="content-box">
         <h1 class="h1-blue">按钮</h1>
         <div class="t-intent">
-            <p>代码实例</p>
+
             <li>普通类型按钮</li>
         </div>
+
         <div class="t-content">
             <div class="t-content-left">
                 <pre><code class="language-html hljs xml" >{{buttonHtml}}</code></pre>
@@ -18,7 +19,6 @@
                 <vutButton type="error">error</vutButton>
             </div>
         </div>
-
         <div class="t-intent">
             <li>特殊大小按钮</li>
         </div>
@@ -222,7 +222,8 @@ export default {
         [].forEach.call(preEl, hljs.highlightBlock);
       });
     }
-  }
+  },
+
 };
 </script>
 

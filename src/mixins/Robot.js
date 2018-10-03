@@ -1,5 +1,5 @@
 export default{
     mounted (){
-        console.log('记录组件值')
+        // console.log('记录组件值')
     }
 }

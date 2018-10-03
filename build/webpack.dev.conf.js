@@ -35,6 +35,7 @@ module.exports = merge(baseConfig, {
             'temp': path.resolve(root, 'src')
         }
     },
+ 
     plugins: [
         // new webpack.optimize.CommonsChunkPlugin({
         //     name: 'main',

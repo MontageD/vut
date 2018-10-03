@@ -1,5 +1,6 @@
 <template>
   <nav>
+    {{active}}
     <ul class="nav" ref="nav">
       <li v-for="(v,index) in list" :key="index">
         <span>
@@ -7,13 +8,11 @@
             <span></span>
             {{v.name}}
           </a>
-          <a v-if="!v.tag" class="nav-text" @click="changeRouter(`${v.eng}`)">
-
+          <a v-if="!v.tag" class="nav-text" @click="changeRouter(`${v.eng}`)" :class='{v_eng:active==v.eng?true:false} '>
             {{v.name}}
             <small>{{v.eng}}</small>
           </a>
         </span>
-
       </li>
     </ul>
   </nav>
@@ -22,6 +21,7 @@
 export default {
   data() {
     return {
+      active: "",
       list: [
         {
           name: "开始准备",
@@ -45,7 +45,7 @@ export default {
         },
         {
           name: "图标",
-          eng: "icon"
+          eng: "Icon"
         },
         {
           name: "表单组件",
@@ -82,6 +82,14 @@ export default {
         {
           name: "可视工具组件",
           tag: 2
+        },
+        {
+          name: "顶部导航",
+          eng: "Navbar"
+        },
+        {
+          name: "底部导航",
+          eng: "Tabbar"
         },
         {
           name: "时间轴",
@@ -139,21 +147,28 @@ export default {
       ]
     };
   },
+  created() {},
+
+  watch: {
+    $route: {
+      handler: (val, oldVal) => {
+        this.active = val.name;
+      },
+      deep: true
+    }
+  },
   methods: {
     changeRouter(url) {
-      console.log("/" + url);
       this.$router.push({
         name: url
       });
-      // if (url) {
-      //   this.$router.push({
-      //     path: url
-      //   });
-      // }
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.v_eng {
+  color: #ff5252;
+}
 </style>

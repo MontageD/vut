@@ -1,0 +1,12 @@
+$height:'30px';
+$color: '#000';
+$bgcolor: '#fff';
+
+// 导航的基本样式
+@mixin nav-header($h, $c, $b, $w) {
+    height: $h;
+    color: $c;
+    background-color: $b;
+}
+
+.nav-list {}

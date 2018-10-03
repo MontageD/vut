@@ -1,0 +1,466 @@
+$vutfont-vuts: 'vut-icon';
+
+@font-face {
+  font-family: $vutfont-vuts;
+  src: url('//at.alicdn.com/t/font_859871_mjskutnui88.ttf') format('truetype');
+  // src: font-url('icon/iconfont.ttf') format('truetype');
+  // @import  'fontFace';
+}
+
+.#{$vutfont-vuts} {
+  font-family: $vutfont-vuts !important;
+  font-size: .6rem;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: .6rem;
+  width: .6rem;
+  display: inline-block;
+  position: relative;
+
+}
+
+.#{$vutfont-vuts}:before {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 100%;
+  transform: translate(-50%, -50%);
+  line-height: 100%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+// 动画效果
+//  (动画加载)
+.#{$vutfont-vuts}-loading {
+  animation: #{$vutfont-vuts}-loading 1s infinite;
+}
+
+@keyframes #{$vutfont-vuts}-loading {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+
+}
+
+.vut-accessory:before {
+  content: "\e6dd";
+}
+
+.vut-add:before {
+  content: "\e6df";
+}
+
+.vut-addition_fill:before {
+  content: "\e6e0";
+}
+
+.vut-addition:before {
+  content: "\e6e1";
+}
+
+.vut-addpeople_fill:before {
+  content: "\e6e2";
+}
+
+.vut-addpeople:before {
+  content: "\e6e3";
+}
+
+.vut-addressbook_fill:before {
+  content: "\e6e4";
+}
+
+.vut-addressbook:before {
+  content: "\e6e5";
+}
+
+.vut-browse_fill:before {
+  content: "\e6e6";
+}
+
+.vut-browse:before {
+  content: "\e6e7";
+}
+
+.vut-businesscard_fill:before {
+  content: "\e6e8";
+}
+
+.vut-businesscard:before {
+  content: "\e6e9";
+}
+
+.vut-camera_fill:before {
+  content: "\e6ea";
+}
+
+.vut-camera:before {
+  content: "\e6eb";
+}
+
+.vut-close:before {
+  content: "\e6ec";
+}
+
+.vut-collection_fill:before {
+  content: "\e6ed";
+}
+
+.vut-collection:before {
+  content: "\e6ee";
+}
+
+.vut-coordinates_fill:before {
+  content: "\e6ef";
+}
+
+.vut-coordinates:before {
+  content: "\e6f0";
+}
+
+.vut-delete_fill:before {
+  content: "\e6f2";
+}
+
+.vut-delete:before {
+  content: "\e6f3";
+}
+
+.vut-eit:before {
+  content: "\e6f5";
+}
+
+.vut-emoji_fill:before {
+  content: "\e6f6";
+}
+
+.vut-emoji:before {
+  content: "\e6f7";
+}
+
+.vut-empty:before {
+  content: "\e6f8";
+}
+
+.vut-empty_fill:before {
+  content: "\e6f9";
+}
+
+.vut-enter:before {
+  content: "\e6fa";
+}
+
+.vut-enterinto:before {
+  content: "\e6fb";
+}
+
+.vut-enterinto_fill:before {
+  content: "\e6fc";
+}
+
+.vut-feedback_fill:before {
+  content: "\e6fd";
+}
+
+.vut-feedback:before {
+  content: "\e6fe";
+}
+
+.vut-flashlight:before {
+  content: "\e6ff";
+}
+
+.vut-flashlight_fill:before {
+  content: "\e700";
+}
+
+.vut-group:before {
+  content: "\e701";
+}
+
+.vut-group_fill:before {
+  content: "\e702";
+}
+
+.vut-integral_fill:before {
+  content: "\e703";
+}
+
+.vut-integral:before {
+  content: "\e704";
+}
+
+.vut-label:before {
+  content: "\e706";
+}
+
+.vut-label_fill:before {
+  content: "\e707";
+}
+
+.vut-like_fill:before {
+  content: "\e708";
+}
+
+.vut-like:before {
+  content: "\e709";
+}
+
+.vut-lock_fill:before {
+  content: "\e70a";
+}
+
+.vut-lock:before {
+  content: "\e70b";
+}
+
+.vut-mail:before {
+  content: "\e70c";
+}
+
+.vut-mail_fill:before {
+  content: "\e70d";
+}
+
+.vut-manage_fill:before {
+  content: "\e70e";
+}
+
+.vut-manage:before {
+  content: "\e70f";
+}
+
+.vut-message:before {
+  content: "\e710";
+}
+
+.vut-message_fill:before {
+  content: "\e711";
+}
+
+.vut-mine:before {
+  content: "\e712";
+}
+
+.vut-mine_fill:before {
+  content: "\e713";
+}
+
+.vut-mobilephone_fill:before {
+  content: "\e714";
+}
+
+.vut-mobilephone:before {
+  content: "\e715";
+}
+
+.vut-more:before {
+  content: "\e716";
+}
+
+.vut-offline_fill:before {
+  content: "\e717";
+}
+
+.vut-offline:before {
+  content: "\e718";
+}
+
+.vut-people_fill:before {
+  content: "\e719";
+}
+
+.vut-people:before {
+  content: "\e71a";
+}
+
+.vut-picture_fill:before {
+  content: "\e71b";
+}
+
+.vut-picture:before {
+  content: "\e71c";
+}
+
+.vut-play:before {
+  content: "\e71d";
+}
+
+.vut-play_fill:before {
+  content: "\e71e";
+}
+
+.vut-playon_fill:before {
+  content: "\e71f";
+}
+
+.vut-playon:before {
+  content: "\e720";
+}
+
+.vut-praise_fill:before {
+  content: "\e721";
+}
+
+.vut-praise:before {
+  content: "\e722";
+}
+
+.vut-prompt_fill:before {
+  content: "\e723";
+}
+
+.vut-prompt:before {
+  content: "\e724";
+}
+
+.vut-qrcode:before {
+  content: "\e725";
+}
+
+.vut-redpacket:before {
+  content: "\e726";
+}
+
+.vut-refresh:before {
+  content: "\e727";
+}
+
+.vut-remind_fill:before {
+  content: "\e728";
+}
+
+.vut-remind:before {
+  content: "\e729";
+}
+
+.vut-return:before {
+  content: "\e72a";
+}
+
+.vut-right:before {
+  content: "\e72b";
+}
+
+.vut-scan:before {
+  content: "\e72c";
+}
+
+.vut-send:before {
+  content: "\e72d";
+}
+
+.vut-setup_fill:before {
+  content: "\e72e";
+}
+
+.vut-setup:before {
+  content: "\e72f";
+}
+
+.vut-share_fill:before {
+  content: "\e730";
+}
+
+.vut-share:before {
+  content: "\e731";
+}
+
+.vut-success_fill:before {
+  content: "\e732";
+}
+
+.vut-success:before {
+  content: "\e733";
+}
+
+.vut-suspend:before {
+  content: "\e734";
+}
+
+.vut-switch:before {
+  content: "\e735";
+}
+
+.vut-systemprompt_fill:before {
+  content: "\e736";
+}
+
+.vut-systemprompt:before {
+  content: "\e737";
+}
+
+.vut-text:before {
+  content: "\e738";
+}
+
+.vut-time_fill:before {
+  content: "\e739";
+}
+
+.vut-time:before {
+  content: "\e73a";
+}
+
+.vut-translation_fill:before {
+  content: "\e73b";
+}
+
+.vut-translation:before {
+  content: "\e73c";
+}
+
+.vut-trash:before {
+  content: "\e73d";
+}
+
+.vut-trash_fill:before {
+  content: "\e73e";
+}
+
+.vut-undo:before {
+  content: "\e73f";
+}
+
+.vut-warning_fill:before {
+  content: "\e740";
+}
+
+.vut-warning:before {
+  content: "\e741";
+}
+
+.vut-search:before {
+  content: "\e742";
+}
+
+.vut-packup:before {
+  content: "\e749";
+}
+
+.vut-unfold:before {
+  content: "\e74a";
+}
+
+.vut-financial_fill:before {
+  content: "\e74b";
+}

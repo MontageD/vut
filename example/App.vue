@@ -20,10 +20,27 @@ export default {
   components: {
     THeader,
     TSlider
+  },
+  beforeRouteLeave(to, from, next) {
+    const answer = window.confirm(
+      "Do you really want to leave? you have unsaved changes!"
+    );
+    if (answer) {
+      next();
+    } else {
+      next(false);
+    }
+  },
+  mounted() {
+    this.$nextTick(function() {
+      const oHtml = document.getElementsByTagName("html")[0];
+      const width = oHtml.clientWidth;
+      // 320px的屏幕基准像素为12px
+      oHtml.style.fontSize = 24 * (width / 320) + "px";
+    });
   }
 };
 </script>
 
 <style lang='scss' scoped>
-
 </style>
