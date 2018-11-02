@@ -5,28 +5,30 @@
         </div> -->
 
         <div class="t-intent">
-            <li>特殊大小按钮</li>
+            <li>图标大小按钮</li>
         </div>
         <div class="t-content">
             <div class="t-content-left">
-                <pre><code class="language-html hljs xml" >{{iconHTML}}</code></pre>
+                <pre><code class="language-html hljs xml" >{{iconHTML1}}</code></pre>
             </div>
             <div class="t-content-right">
-                <vutIcon name="accessory"></vutIcon>
+                <vutIcon name="flashlight"></vutIcon>
                 <vutIcon color="#ff5252" name="right"></vutIcon>
-                <vutIcon size="1" name="add"></vutIcon>
+                <vutIcon size="1" name="emoji"></vutIcon>
             </div>
         </div>
         <div class="t-intent">
-            <li>按钮的动态系哦啊过</li>
+            <li>图标的动态效果</li>
         </div>
-
         <div class="t-content">
             <div class="t-content-left">
-                <pre><code class="language-html hljs xml" >{{iconHTML}}</code></pre>
+                <pre><code class="language-html hljs xml" >{{iconHTML2}}</code></pre>
             </div>
             <div class="t-content-right">
                 <vutIcon animation="loading" name="more"></vutIcon>
+                <vutIcon animation="rotating" name="refresh"></vutIcon>
+                <vutIcon animation="vibration" name="flashlight"></vutIcon>
+                <vutIcon animation="looming" name="warning" color="#eecd53"></vutIcon>
             </div>
         </div>
         <p class="t-intent">
@@ -69,14 +71,18 @@
                         <td>
                             -
                         </td>
-                        <td>.6rem</td>
+                        <td>.26rem</td>
                     </tr>
                     <tr>
                         <td>animation</td>
                         <td>动画效果</td>
                         <td>String</td>
                         <td>
-                            loading
+                            <span class="smork">loading(加载等待)</span>
+                            <span class="smork">rotating(旋转)</span>
+                            <span class="smork">vibration(震动)</span>
+                            <span class="smork">looming(若影若现)</span>
+
                         </td>
                         <td>-</td>
                     </tr>
@@ -703,11 +709,16 @@ import hljs from "highlight.js";
 export default {
   data() {
     return {
-      iconHTML: `
-<vutIcon name="accessory"></vutIcon>
+      iconHTML1: `<vutIcon name="accessory"></vutIcon>
 <vutIcon color="blue" name="collection"></vutIcon>
 <vutIcon size="1" name="add"></vutIcon>
-<vutIcon animation="loading" name="more"></vutIcon>`
+`,
+      iconHTML2: 
+      `<vutIcon animation="loading" name="more"></vutIcon>
+<vutIcon animation="rotating" name="refresh"></vutIcon>
+<vutIcon animation="vibration" name="flashlight"></vutIcon>
+<vutIcon animation="looming" name="warning" color="#eecd53"></vutIcon>
+`
     };
   },
   created() {

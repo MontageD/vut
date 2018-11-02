@@ -1,5 +1,6 @@
-import cell from './src/cell.vue';
-
+import cell from './cell.vue';
+import cellBox from './cellBox.vue';
 export  {
-    cell
+    cell,
+    cellBox
 }

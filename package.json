@@ -1,10 +1,9 @@
 {
-  "name": "xam",
-  "description": "A Vue.js project",
-  "version": "1.0.0",
-  "author": "tb11383174 <tb11383174@aliyun.com>",
+  "name": "vue-vut",
+  "description": "A Vue.js UI Framework",
+  "version": "0.0.1",
+  "author": "dexing <guanndexis@gmail.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
     "start": "webpack-dev-server --progress --color --hot -env.development --config build/webpack.dev.conf.js",

@@ -1,6 +1,6 @@
 <template>
     <div class="content-box">
-        <h1 class="h1-blue">导航(顶部导航/底部导航)</h1>
+        <h1 class="h1-blue">顶部导航</h1>
         <!-- <div class="t-intent">
         </div> -->
 

@@ -1,6 +1,5 @@
 <template>
   <nav>
-    {{active}}
     <ul class="nav" ref="nav">
       <li v-for="(v,index) in list" :key="index">
         <span>
@@ -8,7 +7,7 @@
             <span></span>
             {{v.name}}
           </a>
-          <a v-if="!v.tag" class="nav-text" @click="changeRouter(`${v.eng}`)" :class='{v_eng:active==v.eng?true:false} '>
+          <a v-if="!v.tag" class="nav-text" @click="changeRouter(`${v.eng}`)" :class='{v_eng:routeName==v.eng?true:false} '>
             {{v.name}}
             <small>{{v.eng}}</small>
           </a>
@@ -18,14 +17,16 @@
   </nav>
 </template>
 <script>
+import slider from "@/mixins/slider";
 export default {
+  mixins: [slider],
   data() {
     return {
       active: "",
       list: [
         {
           name: "开始准备",
-          tag: 2
+          tag: 1
         },
         {
           name: "快速上手",
@@ -49,7 +50,7 @@ export default {
         },
         {
           name: "表单组件",
-          tag: 2
+          tag: 3
         },
         {
           name: "表单基础样式",
@@ -81,7 +82,7 @@ export default {
         },
         {
           name: "可视工具组件",
-          tag: 2
+          tag: 4
         },
         {
           name: "顶部导航",
@@ -98,7 +99,7 @@ export default {
 
         {
           name: "常规交互组件",
-          tag: 2
+          tag: 5
         },
         {
           name: "提示框",
@@ -143,11 +144,16 @@ export default {
         {
           name: "评分",
           eng: "Rate"
+        },
+        {
+          name: "其他组件",
+          tag: 6
         }
       ]
     };
   },
-  created() {},
+  created() {
+  },
 
   watch: {
     $route: {
@@ -169,6 +175,10 @@ export default {
 
 <style lang="scss" scoped>
 .v_eng {
-  color: #ff5252;
+  color: #333;
+  font-weight: 800;
+  & > small {
+    color: #333;
+  }
 }
 </style>

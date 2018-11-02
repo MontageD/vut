@@ -4,35 +4,29 @@
         <div class="t-intent">
             <p>代码实例</p>
         </div>
-      
+
         <div class="t-content">
             <div class="t-content-left">
                 <!-- <pre><code class="language-html hljs xml" >{{buttonHtml}}</code></pre> -->
             </div>
-            <div class="t-content-right">
-                <vutCell>
+            <div class="t-content-right demo">
+                <vutCell title="首页" icon="addressbook">
+                </vutCell>
 
+                <vutCell title="我的用户" icon="mine" ricon="enter">
+                    <template slot="right">
+                        <i class="setup"> </i>
+                    </template>
+                </vutCell>
 
-
-
-                    
+                <vutCell title="我的用户" icon="mine" ricon="refresh" riconAnimation='rotating'>
+                    <template slot="right">
+                        <i class="setup"> </i>
+                    </template>
                 </vutCell>
             </div>
+
         </div>
-
-
-
-            <div class="t-content">
-            <div class="t-content-left">
-                <pre><code class="language-html hljs xml" >{{buttonSize}}</code></pre>
-            </div>
-            <div class="t-content-right">
-                <vutButton size="normarl">normarl</vutButton>
-                <vutButton size="large">large</vutButton>
-                <vutButton size="small">small</vutButton>
-            </div>
-        </div>
-
 
         <h2> API</h2>
         <p class="t-intent">
@@ -52,38 +46,39 @@
                 <tbody>
                     <tr>
                         <td>title</td>
-                        <td>标题文字</td>
+                        <td>左侧标题文字</td>
                         <td>String</td>
                         <td>
-                          -
+                            -
                         </td>
                         <td>
                             -
                         </td>
                     </tr>
-                    <tr> 
+                    <tr>
+                        <td>icon</td>
+                        <td>左侧图标</td>
+                        <td>String</td>
+                        <td>
+                            -
+                        </td>
+                        <td>
+                            -
+                        </td>
+                    </tr>
+                    <tr>
                         <td>label</td>
-                        <td>标题说明文字</td>
+                        <td>标题说明文(备注信息)</td>
                         <td>String</td>
                         <td>
-                           -
+                            -
                         </td>
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td>content</td>
-                        <td>右侧内容</td>
+                        <td>ricon</td>
+                        <td>右侧图标</td>
                         <td>String</td>
-                        <td>
-                           -
-                        </td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>isLoading</td>
-                        <td>是否加载动画</td>
-                        <td>Boolean</td>
                         <td>
                             -
                         </td>
@@ -92,9 +87,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>arrow</td>
-                        <td>是否显示箭头</td>
-                        <td>Boolean</td>
+                        <td>riconAnimation</td>
+                        <td>右侧图标动态效果</td>
+                        <td>String</td>
                         <td>
                             -
                         </td>
@@ -129,14 +124,6 @@
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td>icon</td>
-                        <td>填充图标</td>
-                    </tr>
-                    <tr>
-                        <td>left</td>
-                        <td>填充列表左侧内容</td>
-                    </tr>
                     <tr>
                         <td>right</td>
                         <td>填充列表右侧内容</td>
