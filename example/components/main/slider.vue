@@ -1,150 +1,51 @@
 <template>
   <nav>
-    {{active}}
-    <ul class="nav" ref="nav">
-      <li v-for="(v,index) in list" :key="index">
-        <span>
-          <a v-if="v.tag" class="nav-tag" @click="changeRouter(`${v.eng}`)">
-            <span></span>
+    <ul class="nav"
+        ref="nav">
+      <li v-for="(value,index) in list"
+          :key="index">
+
+        <div :class="['nav-li' ,{
+              'nav-tag':k == 0
+            },
+            {
+              'nav-text': k != 0
+            }
+            ]"
+             v-for="(v,k) in value"
+             :key="k"
+             @click="changeRouter(index,k)">
+
+          <a v-show="k == 0" >
             {{v.name}}
           </a>
-          <a v-if="!v.tag" class="nav-text" @click="changeRouter(`${v.eng}`)" :class='{v_eng:active==v.eng?true:false} '>
-            {{v.name}}
-            <small>{{v.eng}}</small>
-          </a>
-        </span>
+
+          <transition name="fade">
+            <a v-if=" (k != 0) && v.active "
+               :class='{
+            v_eng: routeName==v.eng
+            } '>
+              {{v.name}}
+              <small>{{v.eng}}</small>
+            </a>
+          </transition>
+
+        </div>
+
       </li>
     </ul>
   </nav>
 </template>
 <script>
+import slider from "@/mixins/slider";
+import list from '@/data/slider'
 export default {
+  mixins: [slider],
   data() {
     return {
       active: "",
-      list: [
-        {
-          name: "开始准备",
-          tag: 2
-        },
-        {
-          name: "快速上手",
-          eng: "QuickGo"
-        },
-        {
-          name: "更新日志",
-          eng: "updateDate"
-        },
-        {
-          name: "基础组件",
-          tag: 2
-        },
-        {
-          name: "按钮",
-          eng: "Button"
-        },
-        {
-          name: "图标",
-          eng: "Icon"
-        },
-        {
-          name: "表单组件",
-          tag: 2
-        },
-        {
-          name: "表单基础样式",
-          eng: "Cell"
-        },
-        {
-          name: "文字/图文列表",
-          eng: "List"
-        },
-        {
-          name: "网络",
-          eng: "Grids"
-        },
-        {
-          name: "布局",
-          eng: "Flexbox"
-        },
-        {
-          name: "开关",
-          eng: "Switch"
-        },
-        {
-          name: "单选",
-          eng: "Radio"
-        },
-        {
-          name: "多选",
-          eng: "Select"
-        },
-        {
-          name: "可视工具组件",
-          tag: 2
-        },
-        {
-          name: "顶部导航",
-          eng: "Navbar"
-        },
-        {
-          name: "底部导航",
-          eng: "Tabbar"
-        },
-        {
-          name: "时间轴",
-          eng: "TimeLine"
-        },
-
-        {
-          name: "常规交互组件",
-          tag: 2
-        },
-        {
-          name: "提示框",
-          eng: "Dialog"
-        },
-        {
-          name: "进度条",
-          eng: "ProgressBar"
-        },
-        {
-          name: "安全键盘",
-          eng: "KeyBoard"
-        },
-        {
-          name: "发送验证码",
-          eng: "SendCode"
-        },
-        {
-          name: "下拉刷新",
-          eng: "PullRefresh"
-        },
-        {
-          name: "省市县级联动",
-          eng: "CitySelect"
-        },
-        {
-          name: "图片轮播",
-          eng: "Slider"
-        },
-        {
-          name: "搜索框",
-          eng: "Search"
-        },
-        {
-          name: "图片预览",
-          eng: "LightBox"
-        },
-        {
-          name: "时间组件",
-          eng: "DateTime"
-        },
-        {
-          name: "评分",
-          eng: "Rate"
-        }
-      ]
+      list:list,
+      routeName: ""
     };
   },
   created() {},
@@ -158,10 +59,32 @@ export default {
     }
   },
   methods: {
-    changeRouter(url) {
-      this.$router.push({
-        name: url
-      });
+    changeRouter(_pk, _sk) {
+      if (_sk == 0) {
+        console.log("触发头部");
+        this.list[_pk].forEach((element, index) => {
+          // element.active = "";
+          this.$set(this.list[_pk][index], "active", !this.list[_pk][index]['active']);
+        });
+        console.log(this.list[_pk])
+        this.$set(this.list[_pk][_sk], "active", !this.list[_pk][_sk]['active'])
+      }else{
+        console.log('触发跳转',this.list[_pk][_sk])
+        this.$router.push({
+          name: this.list[_pk][_sk]['eng']
+        })
+      }
+
+      // this.$router.push({
+      //   name: url
+      // });
+    }
+  },
+  created() {
+    for (var i = 0; i < this.list.length; i++) {
+      for (var j = 0; j < this.list[i].length; j++) {
+        this.$set(this.list[i][j], "active", true);
+      }
     }
   }
 };
@@ -169,6 +92,10 @@ export default {
 
 <style lang="scss" scoped>
 .v_eng {
-  color: #ff5252;
+  color: #333;
+  font-weight: 800;
+  & > small {
+    color: #333;
+  }
 }
 </style>

@@ -9,15 +9,14 @@ $vutfont-vuts: 'vut-icon';
 
 .#{$vutfont-vuts} {
   font-family: $vutfont-vuts !important;
-  font-size: .6rem;
+  font-size: .26rem;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: .6rem;
-  width: .6rem;
+  height: .26rem;
+  width: .26rem;
   display: inline-block;
   position: relative;
-
 }
 
 .#{$vutfont-vuts}:before {
@@ -31,6 +30,8 @@ $vutfont-vuts: 'vut-icon';
   transform: translate(-50%, -50%);
   line-height: 100%;
   text-align: center;
+
+
 }
 
 
@@ -42,11 +43,64 @@ $vutfont-vuts: 'vut-icon';
 
 // 动画效果
 //  (动画加载)
-.#{$vutfont-vuts}-loading {
-  animation: #{$vutfont-vuts}-loading 1s infinite;
+// "loading",
+// "rotating", // 旋转
+// "vibration",   // 震动
+// "looming"      // 若影若现
+.#{$vutfont-vuts}-loading:before {
+  animation: #{$vutfont-vuts}-loading 1s infinite linear;
 }
 
+.#{$vutfont-vuts}-rotating {
+  animation: #{$vutfont-vuts}-rotating .8s infinite linear;
+}
+
+.#{$vutfont-vuts}-vibration {
+  animation: #{$vutfont-vuts}-vibration .3s infinite;
+}
+
+.#{$vutfont-vuts}-looming {
+  animation: #{$vutfont-vuts}-looming 1s infinite;
+}
+
+@keyframes #{$vutfont-vuts}-vibration {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-10%);
+  }
+  50%{
+    transform: translateY(0);
+  }
+
+  75%{
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 @keyframes #{$vutfont-vuts}-loading {
+  0% {
+    font-size: 0;
+  }
+
+  50% {
+    font-size: 100%;
+  }
+
+  100% {
+    font-size: 0%;
+  }
+}
+
+
+@keyframes #{$vutfont-vuts}-looming {
   0% {
     opacity: 0;
   }
@@ -58,8 +112,23 @@ $vutfont-vuts: 'vut-icon';
   to {
     opacity: 0;
   }
-
 }
+
+
+@keyframes #{$vutfont-vuts}-rotating {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+
+
+
+
 
 .vut-accessory:before {
   content: "\e6dd";

@@ -17,6 +17,11 @@
 import THeader from "./components/main/header";
 import TSlider from "./components/main/slider";
 export default {
+  data(){
+    return {
+        boxs: ''
+    }
+  },
   components: {
     THeader,
     TSlider
@@ -37,7 +42,11 @@ export default {
       const width = oHtml.clientWidth;
       // 320px的屏幕基准像素为12px
       oHtml.style.fontSize = 24 * (width / 320) + "px";
+      this.boxs = this.$el.getElementsByClassName('nav-text')
     });
+  },
+  created(){
+
   }
 };
 </script>

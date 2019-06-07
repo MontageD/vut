@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+html,
+body {
+  font-size: 12px;
+  height: 100%;
+  background-color: #eceff1;
+}
+.box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+.main {
+  display: flex;
+  min-width: 888px;
+  overflow: hidden;
+  height: calc(60%);
+  height: -moz-calc(60%);
+  height: -webkit-calc(60%);
+  height: calc(100% -40px);
+}
+.main .slider {
+  height: auto;
+  background: #e3e3e3;
+  /*空白区域分配比例为0（作用于项目）*/
+  flex-grow: 0;
+}
+.main .router {
+  margin-left: 10px;
+  width: auto;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.demo {
+  padding: 18px 20px 15px!important;
+  background-color: #f5f5f5!important;
+}
+nav {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+  padding-top: 20px;
+  display: block;
+  min-width: 260px;
+  width: 260px;
+  color: #555;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+nav ul {
+  position: relative;
+  padding-bottom: 20px;
+}
+nav ul li {
+  overflow: hidden;
+  border-radius: 3px;
+  margin: .1rem .2rem;
+  text-indent: 5px;
+  box-shadow: 0 2px 20px 0 rgba(137, 122, 122, 0.25);
+  list-style: none;
+}
+nav ul li .nav-tag {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 2px;
+  font-size: 16px;
+}
+nav ul li .nav-tag span {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #ff5252;
+  margin-right: 10px;
+}
+nav ul li .nav-text {
+  font-size: 14px;
+  display: block;
+}
+nav ul li .nav-text a:hover {
+  background-color: #3490de;
+  color: #fff;
+}
+nav ul li .nav-text a:hover small {
+  background-color: #3490de;
+  color: #fff;
+}
+nav ul li .nav-text small {
+  margin-left: 6px;
+  color: #999;
+  font-size: 12px;
+}
+nav ul li a {
+  cursor: pointer;
+  display: block;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+.headering {
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 10px 60px;
+  height: .5rem;
+  background-color: #3490de;
+  margin-bottom: 10px;
+  display: flex;
+}
+.headering .header-logo {
+  height: 100%;
+  flex: 1;
+  position: relative;
+}
+.headering .header-logo .logo-text {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 1.8em;
+  font-weight: 800;
+  line-height: 40px;
+  color: #fff;
+}
+.content-box {
+  background-color: #fff;
+  margin-right: 20px;
+  margin: 25px 25px 100px;
+  padding: 25px 25px 100px;
+  color: #666;
+  line-height: 22px;
+  overflow: hidden;
+  overflow-y: auto;
+  font-size: 14px;
+  box-shadow: 0 2px 20px 0 rgba(137, 122, 122, 0.25);
+}
+.content-box h1 {
+  font-weight: 400;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+.content-box h2 {
+  font-weight: 400;
+}
+.h1-blue {
+  color: #3490de;
+}
+.vut-all {
+  font-weight: 400;
+  margin: 20px 0;
+}
+.t-intent {
+  letter-spacing: 1px;
+  margin: 10px 0;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+pre {
+  margin: 0 !important;
+  padding: 0 9.5px !important;
+  background: transparent !important;
+}
+pre code {
+  font-size: 15px !important;
+  background: transparent !important;
+}
+.t-box {
+  padding: 10px;
+  box-shadow: 0 5px 10px -7px rgba(87, 53, 117, 0.13), 0 10px 30px -6px rgba(0, 60, 170, 0.1);
+}
+.t-content {
+  display: flex;
+  position: relative;
+  border: 1px solid #eee;
+}
+.t-content .t-content-left {
+  flex: 1;
+  height: 100%;
+}
+.t-content .t-content-right {
+  min-height: 1rem;
+  padding: 0 10px;
+  padding-bottom: 10px;
+  flex: 1;
+  border-left: 1px dashed #dedede;
+}
+.t-content:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.table table {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+.table table tr {
+  height: 40px;
+}
+.table table td {
+  height: 40px;
+  border: 1px solid #ececec;
+  padding: 0 8px;
+}
+.table table td .smork {
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #e7eaed;
+}
+.table table td .smork:hover {
+  background-color: #303F9F;
+  color: #fff;
+  cursor: pointer;
+}
+.vut_lists {
+  width: 100% !important;
+}
+.vut_lists li {
+  float: left;
+  width: 100px;
+  height: 180px;
+  text-align: center;
+  list-style: none !important;
+}
+.vut_lists .vut-icon {
+  font-size: 42px;
+  line-height: 100px;
+  margin: 10px 0;
+  color: #333;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+}
+.vut_lists .vut:hover {
+  font-size: 100px;
+}
+.fontclass {
+  display: none;
+}
+.icon {
+  cursor: pointer;
+}

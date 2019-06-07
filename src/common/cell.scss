@@ -1,0 +1,35 @@
+
+
+
+
+
+
+.#{$prefix}-cell{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content:  space-around;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    background-color:rgba(255,255,255,1);
+    min-height: 48px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+}
+.#{$prefix}-cell-left{
+    display: flex;
+    align-items: center;
+}
+.#{$prefix}-cell-right{
+    text-align: right;
+    flex:1;
+}
+.#{$prefix}-cell-icon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1em;
+}

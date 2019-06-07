@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import './common/base.scss'
+// import './common/base.scss'
 import {
   Button
 } from './components/button'
@@ -13,11 +13,9 @@ import {
   Icon
 } from './components/icon'
 
-
-
 const install = function (Vue) {
-  Vue.component(Button.name, Button);
-  Vue.component(cell.name, cell);
+  Vue.component(Button.name, Button)
+  Vue.component(cell.name, cell)
   Vue.component(navBar.name, navBar)
   Vue.component(Icon.name, Icon)
   // Vue.component(ButtonGroup.name, ButtonGroup)
@@ -27,14 +25,13 @@ const install = function (Vue) {
     cell: cell,
     navBar: navBar,
     Icon: Icon
-  };
-};
-
+  }
+}
 
 if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue);
+  install(window.Vue)
 }
 
 export default {
   install
-};
+}
