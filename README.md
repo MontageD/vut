@@ -1,5 +1,5 @@
-# Vut 
-
+# VUT 
+Vue Utility Tool
 > Vue.js 的移动开发UI组件 - 专注于解决常见开发场景的问题 
 
 ####  组件的核心思想：

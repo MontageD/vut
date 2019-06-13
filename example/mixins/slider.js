@@ -18,7 +18,7 @@ const myMixin = {
     }
   },
   created () {
-    console.log('routeName', this.routeName)
+    // console.log('routeName', this.routeName)
   }
 
 }

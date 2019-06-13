@@ -16,11 +16,11 @@
              :key="k"
              @click="changeRouter(index,k)">
 
-          <a v-show="k == 0" >
+          <a v-show="k == 0">
             {{v.name}}
           </a>
 
-          <transition name="fade">
+          <transition name="router-slid">
             <a v-if=" (k != 0) && v.active "
                :class='{
             v_eng: routeName==v.eng
@@ -38,14 +38,14 @@
 </template>
 <script>
 import slider from "@/mixins/slider";
-import list from '@/data/slider'
+import list from "@/data/slider";
 export default {
   mixins: [slider],
   data() {
     return {
       active: "",
-      list:list,
-      routeName: ""
+      list: list,
+      routeName: this.$route.name
     };
   },
   created() {},
@@ -61,29 +61,51 @@ export default {
   methods: {
     changeRouter(_pk, _sk) {
       if (_sk == 0) {
-        console.log("触发头部");
-        this.list[_pk].forEach((element, index) => {
-          // element.active = "";
-          this.$set(this.list[_pk][index], "active", !this.list[_pk][index]['active']);
+        var list = [];
+        this.list.forEach((val, key) => {
+          list[key] = [];
+          if (_pk != key) {
+            this.list[key].forEach((element, index) => {
+              list[key].push({
+                name: element.name,
+                eng: element.eng,
+                active: false
+              });
+            });
+          } else {
+            this.list[key].forEach((element, index) => {
+              // this.$set(
+              //   this.list[_pk][index],
+              //   "active",
+              //   !this.list[_pk][index]["active"]
+              // );
+              list[key].push({
+                name: element.name,
+                eng: element.eng,
+                active: !this.list[key][index]["active"]
+              });
+            });
+          }
         });
-        console.log(this.list[_pk])
-        this.$set(this.list[_pk][_sk], "active", !this.list[_pk][_sk]['active'])
-      }else{
-        console.log('触发跳转',this.list[_pk][_sk])
+        this.list = list;
+      } else {
         this.$router.push({
-          name: this.list[_pk][_sk]['eng']
-        })
+          name: this.list[_pk][_sk]["eng"]
+        });
       }
-
-      // this.$router.push({
-      //   name: url
-      // });
     }
   },
   created() {
     for (var i = 0; i < this.list.length; i++) {
       for (var j = 0; j < this.list[i].length; j++) {
-        this.$set(this.list[i][j], "active", true);
+        if (this.routeName == this.list[i][j].eng) {
+          // console.log("我在里面我要父级也锁起来");
+          this.list[i].forEach((element, index) => {
+            // console.log('element',element)
+            this.$set(this.list[i][index], "active", true);
+          });
+          break;
+        }
       }
     }
   }
@@ -97,5 +119,14 @@ export default {
   & > small {
     color: #333;
   }
+}
+.router-slid-enter-active,
+.router-slid-leave-active {
+  transition: all 0.3s;
+}
+.router-slid-enter,
+.router-slid-leave-active {
+  transform: translate3d(0.3rem, 0, 0);
+  opacity: 0;
 }
 </style>

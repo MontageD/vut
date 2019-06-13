@@ -5,6 +5,10 @@ const baseConfig = require('./base.conf')
 const root = path.resolve(__dirname, '..')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const config = require('../config')
+
+const env = process.env.NODE_ENV === 'testing'
+  ? require('../config/test.env')
+  : require('../config/prod.env')
 module.exports = merge(baseConfig, {
   entry: {
     main: path.resolve(root, 'src/vut.js')

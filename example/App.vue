@@ -9,7 +9,6 @@
       <div class="router">
         <router-view></router-view>
       </div>
-
     </section>
   </section>
 </template>
